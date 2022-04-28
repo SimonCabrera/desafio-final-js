@@ -1,47 +1,47 @@
-let promo1 = ["Promo 1", 600];
-let promo2 = ["Promo 2", 500];
-let promo3 = ["Promo 3", 600];
-let promo4 = ["Promo 4", 650];
-let promo5 = ["Promo 5", 650];
+let promos = [
+  {id:1, name:"Promo 1",price: 600, img: 'images/hamburguesa.jpeg', description:'Doble hamburguesa + doble queso + bacon + cebolla crispy'},
+  {id:2, name:"Promo 2",price: 500, img: 'images/hamburg3.jpeg', description:'Doble hamburguesa + doble queso + cebolla crispy'},
+  {id:3, name:"Promo 3",price: 600, img: 'images/tercerHamburguesa.webp', description:'Doble hamburguesa + doble queso + bacon + pesto + salsa especial'},
+  {id:4, name:"Promo 4",price: 650, img: 'images/cuartaHamburg.webp', description:'Doble hamburguesa + doble queso + bacon + cebolla caramelizada + aderezos'},
+  {id:5, name:"Promo 5",price: 650, img: 'images/cuartaHamburg.webp', description:'Doble hamburguesa + doble queso + bacon + cebolla caramelizada + aderezos'}]
+
 let finalPrice = 0;
-const btn1 = document.getElementById("Button1");
-const btn2 = document.getElementById("Button2");
-const btn3 = document.getElementById("Button3");
-const btn4 = document.getElementById("Button4");
-const btn5 = document.getElementById("Button5");
+let catalogoPadre = document.getElementById('catalogoPadre')
+let catalogo = ''
+for(const promo of promos){
+  catalogo = catalogo + `
+  
+            <article>
+                <h4 class="burguerName">${promo.name}</h4>
+                <img class="img-fluid" src="${promo.img}" alt="">
+                <p class="productDescription">${promo.description}</p>
+                <h3>$${promo.price}</h3>
+                <button id="product-${promo.id}" class="btn btn-primary button" type="submit">Añadir a pedidos</button>
+            </article>
+  
+  `
+}
+const vart = document.getElementById('catalogoBurguer')
+console.log(vart)
+vart.innerHTML = catalogo
 
-const parrafo2 = document.createElement("div");
-parrafo2.innerHTML = "<h2> PEDIDO </h2>";
-document.body.append(parrafo2);
-const div = document.createElement("ul");
+const btn = document.getElementsByClassName("button")
+for(const boton of btn){
+  boton.onclick = addToCart
+  
+}
+function addToCart(i) {
+  const boton = i.target
+  const id = boton.id.split('-')[1]
+  const promo = promos.find(p => p.id == id)
 
-btn1.onclick = () => {
-  //const div = document.createElement('div')
-  div.innerHTML = `<li>${promo1[0]}</li>`;
-  document.parrafo2.appendChild(div);
-  finalPrice = finalPrice + promo1[1];
-};
-btn2.onclick = () => {
-  //const div = document.createElement('div')
-  div.innerHTML = `<li>${promo2[0]}</li>`;
-  document.parrafo2.appendChild(div);
-  finalPrice = finalPrice + promo2[1];
-};
-btn3.onclick = () => {
-  //const div = document.createElement('div')
-  div.innerHTML = `<li>${promo3[0]}</li>`;
-  parrafo2.appendChild(div);
-  finalPrice = finalPrice + promo3[1];
-};
-btn4.onclick = () => {
-  //const div = document.createElement('div')
-  div.innerHTML = `<li>${promo4[0]}</li>`;
-  parrafo2.appendChild(div);
-  finalPrice = finalPrice + promo4[1];
-};
-btn5.onclick = () => {
-  //const div = document.createElement('div')
-  div.innerHTML = `<li>${promo5[0]}</li>`;
-  parrafo2.appendChild(div);
-  finalPrice = finalPrice + promo5[1];
-};
+  const carTittle = document.getElementById('cartTittle')
+  carTittle.style.display='inline'
+  
+
+  const ul = document.createElement('ul')
+  ul.innerHTML = `<li> ${promo.name} ========> $${promo.price} </li>`
+  catalogoPadre.append(ul)
+  const confirmButton = document.getElementById('confirmButton')
+  confirmButton.style.display='inline'
+}

@@ -1,60 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="js/bootstrap.js">
-        <link rel="stylesheet" href="style.css">
-        
-        <title>Burguers</title>
-    </head>
-    <body>
-        <header class="container-fluid">
-            <h1>DELIVERY BOY</h1>
-        </header>
-        <h1 class="foodType">HAMBURGUESAS</h1>
-        <section class="gridHamburg">
-            <article>
-                <h4 class="burguerName">PROMO 1</h4>
-                <img class="img-fluid" src="images/hamburguesa.jpeg" alt="">
-                <p class="productDescription">Doble hamburguesa + doble queso + bacon + cebolla crispy</p>
-                <h3>$600</h3>
-                <button id="Button1" class="btn btn-primary" type="submit">Añadir a pedidos</button>
-            </article>
-            <article>
-                <h4 class="burguerName">PROMO 2</h4>
-                <img src="images/hamburg3.jpeg" alt="">
-                <p class="productDescription">Doble hamburguesa + doble queso + cebolla crispy</p>
-                <h3>$500</h3>
-                <button id="Button2" class="btn btn-primary" >Añadir a pedidos</button>
-            </article>
-            <article>
-                <h4 class="burguerName">PROMO 3</h4>
-                <img class="img-fluid" src="images/tercerHamburguesa.webp" alt="">
-                <p class="productDescription">doble hamburguesa + doble queso + bacon + pesto + salsa especial</p>
-                <h3>$600</h3>
-                <button id="Button3" class="btn btn-primary" type="submit">Añadir a pedidos</button>
-            </article>
-            <article>
-                <h4 class="burguerName">PROMO 4</h4>
-                <img class="img-fluid" src="images/cuartaHamburg.webp" alt="">
-                <p class="productDescription">doble hamburguesa + doble queso + bacon + cebolla caramelizada + aderezos</p>
-                <h3>$650</h3>
-                <button id="Button4" class="btn btn-primary" type="submit">Añadir a pedidos</button>
-            </article>
-            <article>
-                <h4 class="burguerName">PROMO 5</h4>
-                <img class="img-fluid" src="images/cuartaHamburg.webp" alt="">
-                <p class="productDescription">doble hamburguesa + doble queso + bacon + cebolla caramelizada + aderezos</p>
-                <h3>$650</h3>
-                <button id="Button5" class="btn btn-primary" type="submit">Añadir a pedidos</button>
-            </article>
-        </section>
-        
-        <script src="index2.js"></script>
-        
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="js/bootstrap.js" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Burguers</title>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <h1>DELIVERY BOY</h1>
+    </header>
+    <h1 class="foodType">HAMBURGUESAS</h1>
+    <div id="catalogoBurguer" class="gridHamburg"></div>
+
+    <div class="carrito">
+      <h1 id="cartTittle" style="display: none">Su pedido:</h1>
+      <div id="catalogoPadre"></div>
+      <button id="confirmButton" class="btn btn-primary" style="display: none">
+        Confirmar
+      </button>
+    </div>
+    <script src="index2.js"></script>
+  </body>
 </html>
