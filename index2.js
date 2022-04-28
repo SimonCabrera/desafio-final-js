@@ -5,7 +5,7 @@ let promos = [
   {id:4, name:"Promo 4",price: 650, img: 'images/cuartaHamburg.webp', description:'Doble hamburguesa + doble queso + bacon + cebolla caramelizada + aderezos'},
   {id:5, name:"Promo 5",price: 650, img: 'images/cuartaHamburg.webp', description:'Doble hamburguesa + doble queso + bacon + cebolla caramelizada + aderezos'}]
 
-let finalPrice = 0;
+
 let catalogoPadre = document.getElementById('catalogoPadre')
 let catalogo = ''
 for(const promo of promos){
@@ -31,10 +31,11 @@ for(const boton of btn){
   
 }
 function addToCart(i) {
+  let finalPrice = 0
   const boton = i.target
   const id = boton.id.split('-')[1]
   const promo = promos.find(p => p.id == id)
-
+  finalPrice = finalPrice + promo.price
   const carTittle = document.getElementById('cartTittle')
   carTittle.style.display='inline'
   
@@ -45,3 +46,4 @@ function addToCart(i) {
   const confirmButton = document.getElementById('confirmButton')
   confirmButton.style.display='inline'
 }
+console.log(finalPrice) 
