@@ -1,8 +1,8 @@
 let promo1 = ["Promo 1", 600];
-let promo2 = [{ name: "Promo 2", price: 500 }];
-let promo3 = [{ name: "Promo 3", price: 600 }];
-let promo4 = [{ name: "Promo 4", price: 650 }];
-let promo5 = [{ name: "Promo 5", price: 650 }];
+let promo2 = ["Promo 2", 500];
+let promo3 = ["Promo 3", 600];
+let promo4 = ["Promo 4", 650];
+let promo5 = ["Promo 5", 650];
 let finalPrice = 0;
 const btn1 = document.getElementById("Button1");
 const btn2 = document.getElementById("Button2");
@@ -27,9 +27,9 @@ btn2.onclick = () => {
   document.parrafo2.appendChild(div);
   finalPrice = finalPrice + promo2[1];
 };
-btn3.onclick = (e) => {
+btn3.onclick = () => {
   //const div = document.createElement('div')
-  div.innerHTML = `<li>${e.name}</li>`;
+  div.innerHTML = `<li>${promo3[0]}</li>`;
   parrafo2.appendChild(div);
   finalPrice = finalPrice + promo3[1];
 };
