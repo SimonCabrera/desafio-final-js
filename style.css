@@ -54,6 +54,23 @@ nav{
 .tituloPapas{
     text-align: center;
 }
+.carritoFlex{
+    display: flex;
+    justify-content: center;
+}
 .carrito{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    background-color: lightblue;
+    border: 3px solid;
+    border-radius: 5%;
+    width: 50%;
+   padding: 20px;
+    
+}
+.confirmButton{
+    
+    width: 25%;
 }
