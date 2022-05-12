@@ -38,7 +38,6 @@ let promos = [
       "Doble hamburguesa + doble queso + bacon + cebolla caramelizada + aderezos",
   },
 ];
-
 let finalPrice = 0;
 let catalogoPadre = document.getElementById("catalogoPadre");
 let catalogo = "";
@@ -78,4 +77,6 @@ function addToCart(i) {
   totalPrice.innerHTML = "Total: " + finalPrice;
 }
 const confirmButton = document.getElementById("confirmButton");
-confirmButton.onclick = () => alert("Su pedido fue recibido");
+// confirmButton.onclick = () => alert("Su pedido fue recibido");
+confirmButton.onclick = () => swal("Muchas gracias!!", "Su pedido fue recibido correctamente!", "success");
+
