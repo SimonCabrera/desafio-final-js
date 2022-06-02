@@ -1,3 +1,6 @@
 let date = document.getElementById('date')
 
-date.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
+const interval = setInterval(()=>{
+  const now = new Date()
+  date.innerHTML = now.toLocaleString()
+}, 1000)

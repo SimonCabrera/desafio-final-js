@@ -10,20 +10,16 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Burguers</title>
   </head>
   <body>
     <header class="container-fluid">
-      <h1 style="color: rgb(205, 92, 92)" class="header">Jigorō Kanō</h1>
+      <a class="headerLink" href="index.html">
+        <h1 style="color: rgb(205, 92, 92)" class="header">Jigorō Kanō</h1>
+      </a>
     </header>
     <nav class="navBar">
       
@@ -34,7 +30,7 @@
     </nav>
     <div id="catalogoBurguer" class="gridHamburg"></div>
 
-    <div class="carritoFlex">
+    <div class="carritoFlex animate__animated animate__backInLeft">
       <div class="carrito" id="cartTittle" style="display: none">
         <h1>Su pedido:</h1>
         <div id="catalogoPadre"></div>
